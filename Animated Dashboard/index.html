@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Animated Dashboard</title>
+<link href="css/styles.css" rel="stylesheet">
+<!-- Bring in some Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<!-- Bring in the jQuery library --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<!-- Bring in the jQuery UI plugin --> 
+<script src="js/jquery-ui.min.js"></script> 
+<!-- Your beautiful jQuery code goes below --> 
+<script>
+$(document).ready(function() {
+ $("#dashboard").hover(
+	function(){
+		$(this).stop().animate(
+		{
+			top: "0",
+			backgroundColor: "rgb(27,45,94)"
+		},
+		500,
+		"easeInSine"
+		);//end animate
+	},
+	function(){
+		$(this).stop().animate(
+		{
+			top: "-92px",
+			backgroundColor: "rbg(255,211,224)"
+		}, 1500,
+		"easeOutBounce"
+		);//end animate
+	});//end hover
+}); // end ready 
+</script>
+</head>
+<body>
+<div id="dashboard"> <a href="#section1">home</a> <a href="#section2">Other Link</a> <img src="images/orange_h.jpg" width="70" height="70" alt="orange"> <img src="images/purple_h.jpg" width="70" height="70" alt="purple"> <img src="images/red_h.jpg" width="70" height="70" alt="red"> <img src="images/yellow_h.jpg" width="70" height="70" alt="yellow"> </div>
+<div class="content">
+		<h1>Slide in Dashboard</h1>
+		<p>Mouse over the pink stripe on the left edge of this page.</p>
+</div>
+</body>
+</html>
